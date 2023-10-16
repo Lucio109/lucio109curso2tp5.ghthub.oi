@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --ruler: 16px;
+            --color-red: #AE1100;
+            --color-bg: #EBECF0;
+            --color-shadow: #BABECC;
+            --color-white: #FFF;
+        }
+
+        body, html {
+            background-color: rgb(137, 241, 241);
+        }
+
+        body, p, input, select, textarea, button {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.2px;
+            font-size: var(--ruler);
+        }
+
+        div, p {
+            color: var(--color-shadow);
+            text-shadow: 1px 1px 1px var(--color-white);
+        }
+
+        form {
+            padding: var(--ruler);
+            width: calc(var(--ruler) * 20);
+            margin: 0 auto;
+        }
+
+        .segment {
+            padding: calc(var(--ruler) * 2) 0;
+            text-align: center;
+        }
+
+        button, input {
+            border: 0;
+            outline: 0;
+            font-size: var(--ruler);
+            border-radius: calc(var(--ruler) * 20);
+            padding: var(--ruler);
+            background-color: var(--color-bg);
+            text-shadow: 1px 1px 0 var(--color-white);
+        }
+
+        label {
+            display: block;
+            margin-bottom: calc(var(--ruler) * 1.5);
+            width: 100%;
+        }
+
+        input {
+            margin-right: calc(var(--ruler) / 2);
+            box-shadow: inset 2px 2px 5px var(--color-shadow), inset -5px -5px 10px var(--color-white);
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.2s ease-in-out;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        input:focus {
+            box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+        }
+
+        button {
+            color: #ff0000;
+            font-weight: bold;
+            box-shadow: -5px -5px 20px var(--color-white), 5px 5px 20px var(--color-shadow);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow);
+        }
+
+        button:active {
+            box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+        }
+
+        .icon {
+            margin-right: calc(var(--ruler) / 2);
+        }
+
+        .unit {
+            border-radius: calc(var(--ruler) / 2);
+            line-height: 0;
+            width: calc(var(--ruler) * 3);
+            height: calc(var(--ruler) * 3);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 calc(var(--ruler) / 2);
+            font-size: calc(var(--ruler) * 1.2);
+        }
+
+        .unit .icon {
+            margin-right: 0;
+        }
+
+        .red {
+            display: block;
+            width: 100%;
+            color: var(--color-red);
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .input-group label {
+            margin: 0;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="segment">
+            <h1>Sign up</h1>
+        </div>
+
+        <label>
+            <input type="text" placeholder="Email Address"/>
+        </label>
+        <label>
+            <input type="password" placeholder="Password"/>
+        </label>
+        <button class="red" type="button"><i class="icon ion-md-lock"></i> Log in</button>
+
+        <div class="segment">
+            <button class="unit" type="button"><i class="icon ion-md-arrow-back"></i></button>
+<button class="unit" type="button"><i class="icon ion-md-bookmark"></i></button>
+<button class="unit" type="button"><i class="icon ion-md-settings"></i></button>
+</div>
+
+<div class="input-group">
+<label>
+<input type="text" placeholder="Email Address"/>
+</label>
+<button class="unit" type="button"><i class="icon ion-md-search"></i></button>
+</div>
+
+</form>
+</body>
+</html>
